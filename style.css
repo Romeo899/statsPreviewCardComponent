@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #090b1a;
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.6;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.card {
+  background-color: #1b1938;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 330px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  position: relative;
+}
+
+.card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #aa5cdb;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+}
+
+.card__image img {
+  width: 100%;
+  display: block;
+}
+
+.card__content {
+  padding: 2em;
+}
+
+.card__content h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.highlight {
+  color: #aa5cdb;
+}
+
+.description {
+  color: #ffffffbf;
+  font-size: 0.9rem;
+  margin-bottom: 2em;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.stat__number {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.stat__label {
+  color: #ffffff99;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* MEDIA QUERY FOR DESKTOP */
+@media (min-width: 768px) {
+  .card {
+    max-width: 1000px;
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+
+  .card__image {
+    width: 50%;
+  }
+
+  .card__image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card__content {
+    width: 50%;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card__content h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 3em;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
